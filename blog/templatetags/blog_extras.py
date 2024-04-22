@@ -60,3 +60,7 @@ def col(extra_classes=""):
 @register.simple_tag()
 def endcol():
     return format_html("</div>")
+
+
+# @register.inclusion_tag('blog/post-comments.html')
+# def 

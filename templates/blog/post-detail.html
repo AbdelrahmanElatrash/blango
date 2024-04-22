@@ -18,7 +18,10 @@
         {% endcol %}
     {%endrow%}
 
-     {% row "border-bottom" %}
+
+    <!-- for comments  -->
+    {% include 'blog/post-comments.html' %}
+    {% row "border-bottom" %}
         {% col %}
             {%recent_posts post%}
         {%endcol%}
