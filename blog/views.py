@@ -1,3 +1,4 @@
+import logging 
 from django.shortcuts import render, get_object_or_404, redirect
 from blog.models import Post 
 from django.utils import timezone
@@ -5,9 +6,16 @@ from blog.forms import CommentForm
 # Create your views here.
 
 
+#  create aloger instance
+logger = logging.getLogger(__name__)
+
 
 def index(request):
     posts = Post.objects.filter(published_at__lte=timezone.now())
+    
+    # After retrieving the Posts from the database in the indexview, log howmany they are at DEBUGlevel
+    logger.debug("got %d posts", len(posts))
+    
     return render(request,'blog/index.html', {'posts' : posts})
 
 
@@ -26,6 +34,9 @@ def post_detail(request,slug):
                 comment.creater = request.user  # the current logged in user
                 
                 comment.save() 
+                
+                # log a message when a Commentis created
+                logger.info("created comment for post %d for user %s ", post.pk , request.user)
                 
                 # redirect back to the current Post(this essentially just refreshes the page)
                 return redirect(request.path_info)
