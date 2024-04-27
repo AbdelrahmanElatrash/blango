@@ -32,7 +32,7 @@ class Dev(Configuration):
     DEBUG = values.BooleanValue(True)
 
     ALLOWED_HOSTS = values.ListValue(["localhost", "0.0.0.0",".codio.io","127.0.0.1"])
-
+    INTERNAL_IPS = ["localhost", "0.0.0.0",".codio.io","127.0.0.1"]
 
     # Application definition
 
@@ -46,9 +46,11 @@ class Dev(Configuration):
         'blog',
         'crispy_bootstrap5',
         "crispy_forms",
+        "debug_toolbar",
     ]
 
     MIDDLEWARE = [
+        "debug_toolbar.middleware.DebugToolbarMiddleware",
         'django.middleware.security.SecurityMiddleware',
         'django.contrib.sessions.middleware.SessionMiddleware',
         'django.middleware.common.CommonMiddleware',

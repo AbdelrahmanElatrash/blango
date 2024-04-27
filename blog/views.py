@@ -12,7 +12,8 @@ logger = logging.getLogger(__name__)
 
 
 def index(request):
-    posts = Post.objects.filter(published_at__lte=timezone.now())
+    posts = Post.objects.filter(published_at__lte=timezone.now()).select_related('author')
+            
     
     # After retrieving the Posts from the database in the index view, log howmany they are at DEBUG level
     logger.debug("got %d posts", len(posts))
