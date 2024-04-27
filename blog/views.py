@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from blog.models import Post 
 from django.utils import timezone
 from blog.forms import CommentForm
+
 # Create your views here.
 
 
@@ -13,7 +14,7 @@ logger = logging.getLogger(__name__)
 def index(request):
     posts = Post.objects.filter(published_at__lte=timezone.now())
     
-    # After retrieving the Posts from the database in the indexview, log howmany they are at DEBUGlevel
+    # After retrieving the Posts from the database in the index view, log howmany they are at DEBUG level
     logger.debug("got %d posts", len(posts))
     
     return render(request,'blog/index.html', {'posts' : posts})
