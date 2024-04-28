@@ -1,0 +1,140 @@
+[
+  {
+    "model": "blog.comment",
+    "pk": 1,
+    "fields": {
+      "creater": 1,
+      "content": "it's really nice day",
+      "content_type": 7,
+      "object_id": 4,
+      "created_at": "2024-04-22T17:50:52.597Z",
+      "modified_at": "2024-04-22T17:50:52.597Z"
+    }
+  },
+  {
+    "model": "blog.comment",
+    "pk": 2,
+    "fields": {
+      "creater": 1,
+      "content": "I hope if i go there last year",
+      "content_type": 7,
+      "object_id": 4,
+      "created_at": "2024-04-22T18:26:28.514Z",
+      "modified_at": "2024-04-22T18:26:28.514Z"
+    }
+  },
+  {
+    "model": "blog.comment",
+    "pk": 3,
+    "fields": {
+      "creater": 1,
+      "content": "the new features is amusing",
+      "content_type": 7,
+      "object_id": 2,
+      "created_at": "2024-04-23T18:55:14.036Z",
+      "modified_at": "2024-04-23T18:55:14.036Z"
+    }
+  },
+  {
+    "model": "blog.comment",
+    "pk": 4,
+    "fields": {
+      "creater": 1,
+      "content": "what's new here ?? I saw this before",
+      "content_type": 7,
+      "object_id": 3,
+      "created_at": "2024-04-23T19:19:31.923Z",
+      "modified_at": "2024-04-23T19:19:31.923Z"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 2,
+    "fields": {
+      "value": "hello world"
+    }
+  },
+  { "model": "blog.tag", "pk": 3, "fields": { "value": "new" } },
+  { "model": "blog.tag", "pk": 4, "fields": { "value": "nice day" } },
+  {
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+      "author": 2,
+      "created_at": "2024-04-18T22:30:23.851Z",
+      "modified_at": "2024-04-19T18:34:53.428Z",
+      "published_at": "2024-04-19T18:34:50Z",
+      "title": "hello world",
+      "slug": "hello-world",
+      "summary": "new release of  python",
+      "content": "lab lab lab",
+      "tags": [2]
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+      "author": 1,
+      "created_at": "2024-04-19T15:37:32.241Z",
+      "modified_at": "2024-04-19T15:37:32.241Z",
+      "published_at": "2024-04-18T15:36:30Z",
+      "title": "new post",
+      "slug": "new-post",
+      "summary": "this is the new post",
+      "content": "new new new lab lab lab post post post",
+      "tags": [2, 3]
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 4,
+    "fields": {
+      "author": 1,
+      "created_at": "2024-04-19T15:39:50.359Z",
+      "modified_at": "2024-04-19T15:39:50.359Z",
+      "published_at": "2024-04-18T15:37:43Z",
+      "title": "nice day",
+      "slug": "nice-day",
+      "summary": "new nice day in the sumer",
+      "content": "in the mid of summer under sunshine in the pacific here there is a couple of things make your day is wonderful",
+      "tags": [4]
+    }
+  },
+  {
+    "model": "blango_auth.User",
+    "pk": 1,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$WHhpQUlkQm9Rc0NiUVZCeElhZXZzeA$5O/RAp834VXCcPd4BEa/CRPxQRR2xcW/Un3hB6L5xvQ",
+      "last_login": "2024-04-27T17:00:46.375Z",
+      "is_superuser": true,
+      "username": "abdelrahman",
+      "first_name": "abdelrahman",
+      "last_name": "elatrash",
+      "email": "a.elatrash170@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-04-18T20:25:49Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "blango_auth.User",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$AgXj65c87VeE93puQNw5du$efgXtW4Or37ZyQHP3N4vBMK2X/iPSQEqsDj53TQhkN8=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "ahmed",
+      "first_name": "ahmed",
+      "last_name": "elatrash",
+      "email": "groupluminos@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-04-19T18:33:48Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
